@@ -1,4 +1,3 @@
-import {BaseOut} from "./baseOut"
 import { ListResponse } from "./listResponse";
 export interface PagedResponse<T> extends ListResponse<T> {
     page_number : Number,
