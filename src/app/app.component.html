@@ -1,0 +1,16 @@
+<div class="card">
+    <p-menubar [model]="menuBarItems" />
+</div>
+<div class="card flex justify-content-center">
+    <p-sidebar [(visible)]="sidebarVisible" styleClass="w-30rem">
+        <ng-template pTemplate="header">
+            <span class="font-semibold text-xl">Sidebar</span>
+        </ng-template>
+        <div class="card flex justify-content-center">
+            <p-panelMenu [model]="menuItems" styleClass="w-full md:w-20rem" />
+        </div>
+    </p-sidebar>
+    <!-- <p-button (onClick)="sidebarVisible = true" icon="pi pi-arrow-right" /> -->
+</div>
+<!-- to change the display view when roting -->
+<router-outlet></router-outlet>
