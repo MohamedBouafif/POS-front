@@ -1,0 +1,31 @@
+<!-- app.html -->
+<div class="container">
+  <div class="card">
+    <p-menubar [model]="items">
+      <ng-template pTemplate="end">
+        <p-menubar [model]="logoutItem" />
+      </ng-template>
+    </p-menubar>
+  </div>
+  <div class="content-wrapper" [ngClass]="{ 'content-shifted': visible }">
+    <p-drawer
+      header="Point Of Sale"
+      [(visible)]="visible"
+      [modal]="false"
+      styleClass="!w-full md:!w-80 lg:!w-[30rem]"
+      position="left"
+    >
+      <p-button
+        label="Employees"
+        icon="pi pi-users"
+        severity="secondary"
+        variant="text"
+        routerLink="/employees"
+        (click)="navigateToEmployees()"
+      ></p-button>
+    </p-drawer>
+    <div class="main-content">
+      <router-outlet></router-outlet> <!-- Moved inside main-content -->
+    </div>
+  </div>
+</div>

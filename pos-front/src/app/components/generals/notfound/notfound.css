@@ -1,0 +1,28 @@
+/* notfound.css */
+.notfound-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+:host ::ng-deep .notfound-card {
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.notfound-content {
+  padding: 1rem;
+}
+
+.notfound-content h2 {
+  color: #9d1212;
+  margin-bottom: 1rem;
+}
+
+.notfound-content p {
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}   
