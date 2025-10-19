@@ -1,8 +1,8 @@
 import { ListResponse } from "./listResponse";
 
 export interface PagedResponse<T> extends ListResponse<T>{
-    page_number:Number,
-    page_size:Number,
-    total_pages:Number,
-    total_records:Number,
+    page_number:number,
+    page_size:number,
+    total_pages:number,
+    total_records:number,
 }

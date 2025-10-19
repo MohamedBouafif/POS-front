@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { Employees } from './components/employees/employees/employees';
-import { Notfound } from './components/generals/notfound/notfound'
+import { Notfound } from './components/notfound/notfound'
 export const routes: Routes = [
     {
     path: '',
