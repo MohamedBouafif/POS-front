@@ -1,0 +1,137 @@
+<p-toast />
+<form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+  <div class="flex gap-2 mb-3">
+    <div class="flex-1">
+      <label for="first_name" class="block mb-2 font-bold">First name</label>
+      <input pInputText id="first_name" class="w-full" formControlName="first_name" />
+      @if (addForm.get('first_name')?.touched && addForm.get('first_name')?.hasError('required')) {
+        <small class="p-error">First name is required.</small>
+      }
+    </div>
+    <div class="flex-1">
+      <label for="last_name" class="block mb-2 font-bold">Last name</label>
+      <input pInputText id="last_name" class="w-full" formControlName="last_name" />
+      @if (addForm.get('last_name')?.touched && addForm.get('last_name')?.hasError('required')) {
+        <small class="p-error">Last name is required.</small>
+      }
+    </div>
+  </div>
+  <div class="flex gap-2 mb-3">
+    <div class="flex-1">
+      <label for="email" class="block mb-2 font-bold">Email</label>
+      <input pInputText id="email" class="w-full" formControlName="email" />
+      @if (addForm.get('email')?.touched && addForm.get('email')?.hasError('required')) {
+        <small class="p-error">Email is required.</small>
+      }
+      @if (addForm.get('email')?.touched && addForm.get('email')?.hasError('invalidEmail')) {
+        <small class="p-error">Please enter a valid email address.</small>
+      }
+    </div>
+    <div class="flex-1">
+      <label for="number" class="block mb-2 font-bold">Number</label>
+      <p-inputNumber inputId="number" formControlName="number" styleClass="w-full" />
+      @if (addForm.get('number')?.touched && addForm.get('number')?.hasError('required')) {
+        <small class="p-error">Number is required.</small>
+      }
+      @if (addForm.get('number')?.touched && addForm.get('number')?.hasError('min')) {
+        <small class="p-error">Number must be non-negative.</small>
+      }
+    </div>
+  </div>
+  <div class="flex gap-2 mb-3">
+    <div class="flex-1">
+      <label for="birth_date" class="block mb-2 font-bold">Birth date</label>
+      <p-datepicker
+        [iconDisplay]="'input'"
+        [showIcon]="true"
+        inputId="birth_date"
+        class="w-full"
+        formControlName="birth_date"
+        dateFormat="yy.mm.dd"
+        [appendTo]="'body'"
+      />
+    </div>
+    <div class="flex-1">
+      <label for="address" class="block mb-2 font-bold">Address</label>
+      <input pInputText id="address" class="w-full" formControlName="address" />
+    </div>
+  </div>
+  <div class="flex gap-2 mb-3">
+    <div class="flex-1">
+      <label for="cnss_number" class="block mb-2 font-bold">CNSS number</label>
+      <input pInputText id="cnss_number" class="w-full" formControlName="cnss_number" />
+      @if (addForm.get('cnss_number')?.touched && addForm.get('cnss_number')?.hasError('required')) {
+        <small class="p-error">CNSS number is required.</small>
+      }
+      @if (addForm.get('cnss_number')?.touched && addForm.get('cnss_number')?.hasError('invalidCnss')) {
+        <small class="p-error">CNSS number must be in the format 12345678-12.</small>
+      }
+    </div>
+    <div class="flex-1">
+      <label for="phone_number" class="block mb-2 font-bold">Phone</label>
+      <input pInputText id="phone_number" class="w-full" formControlName="phone_number" />
+    </div>
+  </div>
+  <div class="mb-3 flex gap-2">
+    <div>
+      <label for="gender" class="block mb-2 font-bold">Gender</label>
+      <p-selectbutton
+        [options]="gender"
+        optionLabel="label"
+        optionValue="value"
+        formControlName="gender"
+      />
+      @if (addForm.get('gender')?.touched && addForm.get('gender')?.hasError('required')) {
+        <small class="p-error">Gender is required.</small>
+      }
+    </div>
+    <div>
+      <label for="contract_type" class="block mb-2 font-bold">Contract type</label>
+      <p-selectbutton
+        [options]="contracts"
+        optionLabel="label"
+        optionValue="value"
+        formControlName="contract_type"
+      />
+      @if (addForm.get('contract_type')?.touched && addForm.get('contract_type')?.hasError('required')) {
+        <small class="p-error">Contract type is required.</small>
+      }
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="roles" class="block mb-2 font-bold">Roles</label>
+    <p-selectbutton
+      [options]="roles"
+      optionLabel="label"
+      optionValue="value"
+      formControlName="roles"
+      [multiple]="true"
+    />
+    @if (addForm.get('roles')?.touched && addForm.get('roles')?.hasError('required')) {
+      <small class="p-error">At least one role is required.</small>
+    }
+  </div>
+  <div class="mb-3">
+    <label for="password" class="block mb-2 font-bold">Password</label>
+    <p-password formControlName="password" [toggleMask]="true" />
+    @if (addForm.get('password')?.touched && addForm.get('password')?.hasError('required')) {
+      <small class="p-error">Password is required.</small>
+    }
+    @if (addForm.get('password')?.touched && addForm.get('password')?.hasError('minlength')) {
+      <small class="p-error">Password must be at least 6 characters.</small>
+    }
+  </div>
+  <div class="mb-3">
+    <label for="confirm_password" class="block mb-2 font-bold">Confirm Password</label>
+    <p-password formControlName="confirm_password" [toggleMask]="true"  [feedback]="false" />
+    @if (addForm.get('confirm_password')?.touched && addForm.get('confirm_password')?.hasError('required')) {
+      <small class="p-error">Confirm password is required.</small>
+    }
+    @if (addForm.hasError('invalidConfirmPassword') && addForm.get('confirm_password')?.touched) {
+      <small class="p-error">Passwords do not match.</small>
+    }
+  </div>
+  <div class="text-center">
+    <p-button label="Submit" [loading]="loading" (onClick)="onSubmit()" [disabled]="!addForm.valid" />
+  </div>
+</form>

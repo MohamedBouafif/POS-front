@@ -99,3 +99,37 @@
             }
         }
     }
+
+:host ::ng-deep .employee-filter-form {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 1rem !important;
+  width: 100% !important;
+}
+
+:host ::ng-deep .employee-filter-form p-floatlabel {
+  flex: 0 1 200px !important; /* Fixed maximum width */
+  min-width: 200px !important;
+}
+
+:host ::ng-deep .employee-filter-form p-floatlabel .p-floatlabel {
+  display: block !important;
+  width: 100% !important;
+}
+
+:host ::ng-deep .employee-filter-form .p-floatlabel > input {
+  width: 100% !important;
+}
+
+:host ::ng-deep .employee-filter-form .button-container {
+  flex-shrink: 0 !important;
+  margin-left: auto !important;
+}
+:host ::ng-deep .employee-filter-form .button-container button:not(:last-child) {
+  margin-right: 1rem !important; /* Space between buttons */
+}
+:host ::ng-deep .employee-filter-form .button-container button {
+  min-width: 140px !important;
+  white-space: nowrap !important;
+}

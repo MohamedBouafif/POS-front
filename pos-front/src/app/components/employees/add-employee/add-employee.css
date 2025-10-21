@@ -1,0 +1,48 @@
+.w-full {
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.block {
+  display: block;
+}
+
+/* Align Gender and Contract type containers */
+.mb-3.flex.gap-2 > div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure SelectButton takes full width and aligns properly */
+:host ::ng-deep .p-selectbutton {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Make sure labels and their controls are properly aligned */
+.mb-3 > label {
+  margin-bottom: 0.5rem;
+}

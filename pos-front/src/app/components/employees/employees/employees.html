@@ -1,3 +1,22 @@
+<div style = "margin-bottom: 2rem;"></div>
+<form class="employee-filter-form" [formGroup]="employeeFilterForm">
+  <p-floatlabel>
+    <i class="pi pi-user mr-2"></i>
+    <input pInputText id="name_substr" formControlName="name_substr" autocomplete="off" />
+    <label for="name_substr">Search By Name</label>
+  </p-floatlabel>
+  
+  <div class="button-container flex gap-2">
+    <button pButton type="button" class="p-button-sm" style="height: 2.5rem;" (click)="openAddEmployeeDialog()">
+      <i class="pi pi-plus" pButtonIcon style = "padding-right: 2px;"></i>
+      <span class="font-medium">Add Employee</span>
+    </button>
+    <button pButton type="button" class="p-button-sm" style="height: 2.5rem;" (click)="openImportEmployeesDialog()">
+      <i class="pi pi-download" pButtonIcon  style="padding-right: 4px;"></i>
+      <span class="font-medium">Import Employees</span>
+    </button>
+  </div>
+</form>
 <p-table
   [value]="employees"
   stripedRows
@@ -29,6 +48,7 @@
       <td>{{ employee.email }}</td>
       <td class="text-center">{{ employee.gender }}</td>
       <td class="text-center">
+        
         <i
           class="pi"
           [ngClass]="{
@@ -39,18 +59,11 @@
         ></i>
       </td>
       <td class="text-center">
-        @if (employee.phoneNumber) {
-        {{ employee.phoneNumber }}
+        @if (employee.phone_number) {
+        {{ employee.phone_number }}
         } @else {--}
       </td>
-      <!-- Uncomment when ready
-      <td>
-        <div class="flex justify-content-center gap-1">
-          <p-button icon="pi pi-user-edit" (onClick)="showEditDialog(employee)" />
-          <p-button icon="pi pi-user-minus" severity="danger" (onClick)="delete($event, employee.id)" />
-        </div>
-      </td>
-      -->
+      
     </tr>
   </ng-template>
   <ng-template pTemplate="emptymessage">

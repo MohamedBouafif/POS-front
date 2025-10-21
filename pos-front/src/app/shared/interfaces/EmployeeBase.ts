@@ -3,17 +3,16 @@ import { ContractType } from "../enums/contractType"
 import { ListResponse } from "./listResponse"
 import { Gender } from "../enums/gender";
 import { AccountStatus } from "../enums/account_status";
-export interface employeeBase {
+export interface EmployeeBase {
   first_name: string;
   last_name: string;
-  number:number;
   email: string;
-  birth_date?: Date;
-  address?: string;
-  gender:Gender
-  cnss_number: string;
-  contract_type: ContractType;
   roles: RoleType[];
-  phoneNumber?: string;
-  account_status:AccountStatus;
+  number: string;
+  birth_date?: string | null; 
+  address?: string | null;
+  cnss_number?: string | null;
+  contract_type: ContractType;
+  gender: Gender;
+  phone_number?: string | null;
 }
