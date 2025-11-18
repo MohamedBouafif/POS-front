@@ -1,5 +1,3 @@
-/* README.md for PosFront */
-
 /# PosFront
 
 A standalone Angular (v20) Point-of-Sale front-end application using PrimeNG. PosFront provides a lightweight UI for managing employees and basic POS workflows with optional server-side rendering (SSR) support.
@@ -14,6 +12,12 @@ PosFront is a frontend app built with Angular standalone components and PrimeNG.
 - Standalone Angular components (no NgModule)
 - Optional SSR entry (server.ts) for server-side rendering
 - Built-in unit test setup
+  
+## Screenshots
+
+### Screenshots (placeholder)
+![Screenshot 1](docs/screenshots/overview.png)
+![Screenshot 2](docs/screenshots/employees.png)
 
 ## Tech Stack
 - Angular 20 (standalone components)
@@ -91,14 +95,7 @@ If integrated with a REST backend, the app expects typical employee endpoints. A
 
 Check src/app/services/employee.ts for the actual endpoints and base URL used.
 
-## Screenshots
-Add UI screenshots below. Recommended: place images in `docs/screenshots/` and reference them here.
 
-### Screenshots (placeholder)
-![Screenshot 1](docs/screenshots/overview.png)
-![Screenshot 2](docs/screenshots/employees.png)
-
-Replace the above placeholder images with your actual screenshots.
 
 ## Contributing
 - Fork the repo and open a PR.
