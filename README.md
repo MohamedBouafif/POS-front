@@ -1,4 +1,4 @@
-/# PosFront
+## PosFront
 
 A standalone Angular (v20) Point-of-Sale front-end application using PrimeNG. PosFront provides a lightweight UI for managing employees and basic POS workflows with optional server-side rendering (SSR) support.
 
