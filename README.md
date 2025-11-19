@@ -96,8 +96,10 @@ Add UI screenshots below. Recommended: place images in `docs/screenshots/` and r
 
 ### Screenshots (placeholder)
 ![Screenshot 1](docs/screenshots/overview.png)
-![Screenshot 2](docs/screenshots/employees.png)
-
+![Screenshot 2](docs/screenshots/add_employee.png)
+![Screenshot 3](docs/screenshots/import_employee_via_csv.png)
+![Screenshot 4](docs/screenshots/import_employee_validation_csv.png)
+![Screenshot 5](docs/screenshots/employee_list.png)
 Replace the above placeholder images with your actual screenshots.
 
 ## Contributing
