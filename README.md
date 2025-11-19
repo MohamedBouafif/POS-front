@@ -8,11 +8,9 @@ PosFront is a frontend app built with Angular standalone components and PrimeNG.
 ## Features
 - Employee list, create, edit, delete (UI)
 - Responsive layout with PrimeNG Drawer and Menubar
-- Light / Dark theme toggle (PrimeNG theme support)
 - Standalone Angular components (no NgModule)
 - Optional SSR entry (server.ts) for server-side rendering
-- Built-in unit test setup
-  
+
 ## Screenshots
 
 ### Screenshots (placeholder)
@@ -67,7 +65,6 @@ npm run serve:ssr:pos-front  # run built SSR server (if available)
 ## Usage
 - Use the menubar to open the drawer and access the Employees UI.
 - The Employees button navigates to `/employees`.
-- Toggle dark mode via the app control — PrimeNG expects a theme selector (configured in main.ts). Ensure the configured selector class (e.g., `.my-app-dark`) is applied to the HTML element or use PrimeNG theme API.
 
 Example: run dev + debug in VS Code (Windows):
 1. npm run start
@@ -103,6 +100,3 @@ Check src/app/services/employee.ts for the actual endpoints and base URL used.
 - Run tests: npm test
 - Add screenshots to docs/screenshots and update README as needed.
 
-## License
-MIT — see LICENSE file or add one if missing.
-```
