@@ -14,9 +14,9 @@ PosFront is a frontend app built with Angular standalone components and PrimeNG.
 ## Screenshots
 
 ![Screenshot 1](docs/screenshots/overview.png)
-![Screenshot 2](docs\screenshots\add_employee.png)
-![Screenshot 4](docs\screenshots\import_employee_validation_csv.png)
-![Screenshot 4](docs\screenshots\import_employees_via_csv.png)
+![Screenshot 2](docs/screenshots/add_employee.png)
+![Screenshot 4](docs/screenshots/import_employee_validation_csv.png)
+![Screenshot 4](docs/screenshots/import_employees_via_csv.png)
 ![Screenshot 5](docs/screenshots/employee_list.png)
 ## Tech Stack
 - Angular 20 (standalone components)
