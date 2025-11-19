@@ -1,6 +1,4 @@
-/* README.md for PosFront */
-
-/# PosFront
+## PosFront
 
 A standalone Angular (v20) Point-of-Sale front-end application using PrimeNG. PosFront provides a lightweight UI for managing employees and basic POS workflows with optional server-side rendering (SSR) support.
 
@@ -10,11 +8,17 @@ PosFront is a frontend app built with Angular standalone components and PrimeNG.
 ## Features
 - Employee list, create, edit, delete (UI)
 - Responsive layout with PrimeNG Drawer and Menubar
-- Light / Dark theme toggle (PrimeNG theme support)
 - Standalone Angular components (no NgModule)
 - Optional SSR entry (server.ts) for server-side rendering
-- Built-in unit test setup
 
+## Screenshots
+
+### Screenshots (placeholder)
+![Screenshot 1](docs/screenshots/overview.png)
+![Screenshot 2](docs/screenshots/add_employee.png.png)
+![Screenshot 4](docs/screenshots/import_employees_via_csv.png.png)
+![Screenshot 4](docs/screenshots/import_employee_validation_csv.png.png)
+![Screenshot 5](docs/screenshots/employee_list.png.png)
 ## Tech Stack
 - Angular 20 (standalone components)
 - PrimeNG (UI components & themes)
@@ -63,7 +67,6 @@ npm run serve:ssr:pos-front  # run built SSR server (if available)
 ## Usage
 - Use the menubar to open the drawer and access the Employees UI.
 - The Employees button navigates to `/employees`.
-- Toggle dark mode via the app control — PrimeNG expects a theme selector (configured in main.ts). Ensure the configured selector class (e.g., `.my-app-dark`) is applied to the HTML element or use PrimeNG theme API.
 
 Example: run dev + debug in VS Code (Windows):
 1. npm run start
@@ -91,16 +94,7 @@ If integrated with a REST backend, the app expects typical employee endpoints. A
 
 Check src/app/services/employee.ts for the actual endpoints and base URL used.
 
-## Screenshots
-Add UI screenshots below. Recommended: place images in `docs/screenshots/` and reference them here.
 
-### Screenshots (placeholder)
-![Screenshot 1](docs/screenshots/overview.png)
-![Screenshot 2](docs/screenshots/add_employee.png)
-![Screenshot 3](docs/screenshots/import_employee_via_csv.png)
-![Screenshot 4](docs/screenshots/import_employee_validation_csv.png)
-![Screenshot 5](docs/screenshots/employee_list.png)
-Replace the above placeholder images with your actual screenshots.
 
 ## Contributing
 - Fork the repo and open a PR.
@@ -108,6 +102,3 @@ Replace the above placeholder images with your actual screenshots.
 - Run tests: npm test
 - Add screenshots to docs/screenshots and update README as needed.
 
-## License
-MIT — see LICENSE file or add one if missing.
-```
